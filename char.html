@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./src/index.js"></script>
     <script src="https://d3js.org/d3.v4.js" charset="utf-8"></script>
     <title>Charting with D3</title>
 </head>
@@ -15,6 +16,7 @@
         <rect x="55" width="20" fill="steelblue"></rect>
         <rect x="80" width="20" fill="steelblue"></rect>
         <rect x="105" width="20" fill="steelblue"></rect>
+        <rect id="testing"></rect>
         <circle cx="140" cy="25"></circle>
     </svg>
     <div id="root"></div>
@@ -34,6 +36,20 @@
                 .attr("fill", function() {
                     return "red"; 
                 });
+
+            d3.select("#testing")
+                .attr("x", function() {
+                    return 106
+                })
+                .attr("height", function() {
+                    return 100
+                })
+                .attr("width", function() {
+                    return 80
+                })
+                .attr("fill", function() {
+                    return "purple"
+                }); 
     </script>
 </body>
 </html>
